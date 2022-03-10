@@ -89,4 +89,15 @@ where JobTitle like 'D_s_g%'
 --If we are looking for a name that contains the % symbol, We need to use the ESCAPE Clause to make it work
 select BusinessEntityID, JobTitle, BirthDate, MaritalStatus, Gender, HireDate, SalariedFlag, VacationHours, SickLeaveHours
 from HumanResources.Employee  
-where JobTitle like '__e%' and jobtitle like '%T%%' Escape 'T'
+where jobtitle like '%T[]%' Escape 'T'
+
+
+
+--TO DO
+--Using AdventureWorks2019, answer the following with Syntax
+
+---Retrieve just ID, Title, Marital status and gender
+--1.) Retrieve the list of JobTitles who have Development in their name
+
+---Retrieve just ID, Title and hire date
+--2.) Retrieve all jobs with title ending in 'er'
