@@ -64,7 +64,7 @@ where JobTitle not like 'P%'
 
 
 --4--
----Using the Symbol _ (Used to mark an empty value where we know there’s something, but not sure what, basically something for holding spaces)
+---Using the Symbol _ (Used to mark an empty value where we know thereâ€™s something, but not sure what, basically something for holding spaces)
 
 --JobTitle where there is an 'e' after the first character
 select BusinessEntityID, JobTitle, BirthDate, MaritalStatus, Gender, HireDate, SalariedFlag, VacationHours, SickLeaveHours
@@ -86,7 +86,7 @@ where JobTitle like 'D_s_g%'
 
 
 --Escape clause to escape a wild card symbol
---If we are looking for a name that contains sya the % symbol, We need to use the ESCAPE Clause to make it work
+--If we are looking for a name that contains the % symbol, We need to use the ESCAPE Clause to make it work
 select BusinessEntityID, JobTitle, BirthDate, MaritalStatus, Gender, HireDate, SalariedFlag, VacationHours, SickLeaveHours
 from HumanResources.Employee  
 where JobTitle like '__e%' and jobtitle like '%T%%' Escape 'T'
